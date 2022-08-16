@@ -18,6 +18,13 @@ resource "aws_security_group" "elk_server" {
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
+  ingress {
+    description      = "Allow port 5601"
+    from_port        = 5601
+    to_port          = 5601
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
 
   egress {
     from_port        = 0
