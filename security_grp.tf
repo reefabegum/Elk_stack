@@ -18,7 +18,24 @@ resource "aws_security_group" "elk_server" {
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
+ 
+  #elasticsearch
   ingress {
+    description      = "Allow port 9200"
+    from_port        = 9200
+    to_port          = 9200
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+  #logstash
+  ingress {
+    description      = "Allow port 5043"
+    from_port        = 5043
+    to_port          = 5043
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+   ingress {
     description      = "Allow port 5601"
     from_port        = 5601
     to_port          = 5601

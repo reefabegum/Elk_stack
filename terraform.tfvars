@@ -6,3 +6,4 @@ cidr_private = "192.168.2.0/24"
 cidr_private1  = "192.168.3.0/24"
 cidr_private2 = "192.168.4.0/24"
 cidr_private3 = "192.168.5.0/24"
+
